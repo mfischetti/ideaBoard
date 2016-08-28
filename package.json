@@ -1,0 +1,15 @@
+{
+  "name": "ideaboard",
+  "version": "1.0.0",
+  "description": "note taking app to record ideas",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.10.2"
+  },
+  "author": "mfischetti",
+  "license": "ISC"
+}
+

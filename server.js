@@ -12,6 +12,9 @@ mongoose.connect(database.url);
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/public/index.html');
 }); 
+app.get('/idea', function(req, res){
+  console.log('New idea posted');
+});
 
 app.listen(PORT, function(){
   console.log('listening on port: '+ PORT);

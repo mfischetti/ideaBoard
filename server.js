@@ -9,6 +9,7 @@ var database = require('./config/database');
 var Idea = require('./app/models/ideas');
 
 app.use(bodyParser.urlencoded({extended: true}))
+app.use("/styles", express.static(__dirname + '/public/styles'));
 
 //connect to remote mongodb
 mongoose.connect(database.url); 

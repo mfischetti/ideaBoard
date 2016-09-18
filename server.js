@@ -6,6 +6,7 @@ var app = express();
 var bodyParser= require('body-parser')
 var PORT = process.env.PORT || 3000;
 var database = require('./config/database');
+var Idea = require('./app/models/ideas');
 
 app.use(bodyParser.urlencoded({extended: true}))
 
@@ -14,9 +15,20 @@ mongoose.connect(database.url);
 
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/public/index.html');
-}); 
+});
+
 app.post('/idea', function(req, res){
-  console.log('New idea posted: '+req.body.idea+'\n'+'Description: '+req.body.description);
+  var newIdea = Idea({
+    idea: req.body.idea,
+    description: req.body.description
+  });
+  
+  //save the new idea
+  newIdea.save(function(err) {
+    if (err) throw err;
+    console.log('Idea created!');
+    res.redirect('/')
+  });
 })
 
 app.listen(PORT, function(){

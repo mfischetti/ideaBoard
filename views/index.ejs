@@ -1,0 +1,25 @@
+<!doctype html>
+  <html>
+   <head>
+    <title>IdeaBoard App</title>
+    <link rel='stylesheet' href='/styles/style.css' type='text/css'/>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+  </head>
+  <body> 
+    <h1>Idea Board Site</h1>
+    <p>Basic site to post project ideas.</p>
+    <ul class="ideas">
+    <% for(var i=0; i<ideas.length; i++) {%>
+        <li class="ideas">
+            <span><%= ideas[i].idea %></span>
+            <span><%= ideas[i].description %></span>
+        </li>
+    <% } %>
+    </ul>
+    <form action="/idea" method="POST">
+      <input type="text" placeholder="Idea" name="idea" class="ideaBox">
+      <input type="text" placeholder="Description" name="description" class="descriptionBox">
+    <button type="submit">Submit</button>
+  </form>
+  </body>
+</html>

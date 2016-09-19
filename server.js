@@ -8,6 +8,8 @@ var PORT = process.env.PORT || 3000;
 var database = require('./config/database');
 var Idea = require('./app/models/ideas');
 
+app.set('view engine', 'ejs')
+
 app.use(bodyParser.urlencoded({extended: true}))
 app.use("/styles", express.static(__dirname + '/public/styles'));
 
@@ -15,7 +17,10 @@ app.use("/styles", express.static(__dirname + '/public/styles'));
 mongoose.connect(database.url); 
 
 app.get('/', function(req, res){
-  res.sendFile(__dirname + '/public/index.html');
+  Idea.find({}, function(err, result) {
+    if (err) throw err;
+      res.render('index.ejs', {ideas: result})
+  });
 });
 
 app.post('/idea', function(req, res){

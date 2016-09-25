@@ -25,8 +25,8 @@ app.get('/', function(req, res){
 
 app.post('/idea', function(req, res){
   var newIdea = Idea({
-    idea: req.body.idea,
-    description: req.body.description
+    title: req.body.title,
+    text: req.body.text
   });
   
   //save the new idea

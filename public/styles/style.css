@@ -1,10 +1,69 @@
-.input-lg{
-height: 160px;
-   font-size: 16px;
-   line-height: 12px;
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
 }
-.input-sm{
-height: 40px;
-   font-size: 16px;
-   line-height: 12px;
+body {
+  background: #fff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+  padding: 30px;
+}
+
+h1 {
+  border-bottom: 3px solid #ddd;
+  font-size: 2.5em;
+}
+
+h2 {
+  border-bottom: 1px solid #eee;
+  font-size: 2em;
+}
+
+.ideaList{
+    margin: 15px 0;
+    padding-left: 30px;
+}
+
+.inputitle{
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 3px;
+    box-sizing: border-box;
+}
+.inputtext{
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;   
+}
+
+.ideaButton {
+  width: 180px;
+  height:50px;
+  color: #ffffff;
+  background-color: #3498db;
+  font-family: "Helvetica Neue";
+  text-decoration: none;
+  font-size: 1.8em;
+  border: 2px #ffffff solid;
+  margin: 10px 0 0 5px;
+  padding-bottom: 10px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.ideaButton:hover {
+  cursor: pointer;
+}
+
+.ideaButton:hover {
+  background-color: #FFffff;
+  color: #3498db;
 }

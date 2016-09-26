@@ -73,19 +73,19 @@ var IdeaForm = React.createClass({
     render: function() {
         return (
         <form className="ideaForm" onSubmit={this.handleSubmit}>
-            <input
+            <input className="inputitle"
             type="text"
             placeholder="Idea Title"
             value={this.state.title}
             onChange={this.handletitleChange}
             />
-            <input
+            <input className="inputtext"
             type="text"
             placeholder="Whats your idea?"
             value={this.state.text}
             onChange={this.handleTextChange}
             />
-            <input type="submit" value="Post" />
+            <input className="ideaButton" type="submit" value="Post"/>
         </form>
         );
     }

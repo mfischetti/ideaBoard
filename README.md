@@ -1,5 +1,5 @@
 # ideaBoard
-App using Node.js, MongoDB and Express to record project ideas 
+App using Node.js, React, MongoDB and Express to record project ideas 
 
 ## Installation
 1. Install Node
